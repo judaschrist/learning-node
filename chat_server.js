@@ -17,6 +17,10 @@ chatServer.on('connection', function(client) {
 		broadcast(data, client);
 	});
 	
+	client.on('end', function() {
+		clientList.splice(clientList.indexOf(client), 1);
+	});
+	
 });
 
 function broadcast(message, client) {
