@@ -1,3 +1,4 @@
+//cluster is not a stable API
 var cluster = require('cluster');
 var numCPUs = require('os').cpus().length;
 
